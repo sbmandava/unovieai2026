@@ -14,10 +14,10 @@ export default function Platform() {
           className="max-w-4xl"
         >
           <h1 className="text-5xl md:text-6xl font-display font-bold mb-8">
-            From data to <br/><span className="text-gradient">understanding.</span>
+            From (un)structured data to <br/><span className="text-gradient">understanding.</span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Nexus reads your data and builds something that did not exist before: a living graph of your organization's context. No manual curation required.
+            Nexus reads your (un)structured data and builds something that did not exist before: a living graph of your organization's context. No manual curation required.
           </p>
         </motion.div>
       </section>
