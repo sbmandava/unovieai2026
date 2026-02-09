@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import securityArchImg from "@/assets/images/zero-trust-architecture.png";
+import securityArchImg from "@/assets/images/zero-trust-edge-identity.png";
 import { Shield, Lock, FileKey, Eye } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
