@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import edgeDeviceImg from "@/assets/images/unovie-edge-device.png";
 import edgePortsImg from "@/assets/images/unovie-edge-ports.png";
 import edgeCamerasImg from "@/assets/images/unovie-edge-cameras.png";
+import edgeDeployment1Img from "@/assets/images/unovie-edge-deployment-1.png";
+import edgeDeployment2Img from "@/assets/images/unovie-edge-deployment-2.png";
 import healthcareImg from "@/assets/images/healthcare-flow.png";
 import manufacturingImg from "@/assets/images/manufacturing-flow.png";
 import maritimeImg from "@/assets/images/maritime-flow.png";
@@ -76,8 +78,18 @@ export default function PhysicalAI() {
                      </div>
                    </TabsContent>
                    <TabsContent value="deployment">
-                     <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl aspect-video flex items-center justify-center p-4">
-                        <img src={edgeCamerasImg} alt="Unovie Edge Deployment" className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500" />
+                     <div className="grid gap-4">
+                       <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl aspect-video flex items-center justify-center p-4">
+                          <img src={edgeCamerasImg} alt="Unovie Edge Deployment Camera" className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500" />
+                       </div>
+                       <div className="grid grid-cols-2 gap-4">
+                         <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl aspect-video flex items-center justify-center p-4">
+                            <img src={edgeDeployment1Img} alt="Unovie Edge Factory Deployment" className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500" />
+                         </div>
+                         <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl aspect-video flex items-center justify-center p-4">
+                            <img src={edgeDeployment2Img} alt="Unovie Edge Robotics Deployment" className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500" />
+                         </div>
+                       </div>
                      </div>
                    </TabsContent>
                  </Tabs>
