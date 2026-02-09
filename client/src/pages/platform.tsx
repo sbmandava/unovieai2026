@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import CodeBlock from "@/components/ui/CodeBlock";
+import contextGraphImg from "@/assets/images/context-graph.png";
+import agentArchImg from "@/assets/images/agent-architecture.png";
 import { Database, Network, Clock, Search, Workflow, Brain } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -53,29 +54,11 @@ export default function Platform() {
                   </li>
                </ul>
              </div>
-             <div className="relative">
-                <div className="absolute inset-0 bg-primary/10 blur-3xl -z-10" />
-                <CodeBlock>
-{`  YOUR DOCUMENTS                        YOUR CONTEXT GRAPH
-  ──────────────                        ──────────────────
-
-  Policy documents                      ┌──────────────────────────────┐
-  Meeting notes             ──────►     │  Entities                    │
-  Technical specs                       │  (people, products, APIs,    │
-  Decision records                      │   policies, teams)           │
-  Process guides                        │                              │
-  Contract terms                        │  Relationships               │
-  Architecture docs                     │  (depends on, replaced by,   │
-                                        │   approved by, caused by)    │
-                                        │                              │
-                                        │  Temporal evolution          │
-                                        │  (when things changed and    │
-                                        │   what triggered the change) │
-                                        │                              │
-                                        │  Decision traces             │
-                                        │  (why this, not that)        │
-                                        └──────────────────────────────┘`}
-                </CodeBlock>
+             <div className="relative group">
+                <div className="absolute inset-0 bg-primary/20 blur-3xl -z-10 group-hover:bg-primary/30 transition-colors duration-500" />
+                <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
+                  <img src={contextGraphImg} alt="Context Graph Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                </div>
              </div>
           </div>
         </div>
@@ -128,42 +111,9 @@ export default function Platform() {
                <p className="text-center text-muted-foreground mb-12">
                  When you ask a question, multiple specialized agents fan out simultaneously.
                </p>
-               <CodeBlock>
-{`  "What changed in the API docs and how does it affect dependent services?"
-                                    │
-                                    ▼
-                            ┌──────────────┐
-                            │ Smart Router │
-                            │              │
-                            │ Detects:     │
-                            │ - temporal   │
-                            │ - graph      │
-                            │ - search     │
-                            └──────┬───────┘
-                                   │
-                     ┌─────────────┼─────────────┐
-                     ▼             ▼             ▼
-              ┌────────────┐ ┌──────────┐ ┌──────────┐
-              │  Temporal  │ │  Graph   │ │  Search  │
-              │  Agent     │ │  Agent   │ │  Agent   │
-              │            │ │          │ │          │
-              │  Finds     │ │  Traces  │ │  Finds   │
-              │  what      │ │  which   │ │  the     │
-              │  changed   │ │  services│ │  actual  │
-              │  and when  │ │  depend  │ │  docs    │
-              └──────┬─────┘ └────┬─────┘ └────┬─────┘
-                     │            │            │
-                     └────────────┼────────────┘
-                                  ▼
-                         ┌────────────────┐
-                         │  Synthesizer   │
-                         │                │
-                         │ Merges all     │
-                         │ findings into  │
-                         │ one coherent   │
-                         │ answer...      │
-                         └────────────────┘`}
-               </CodeBlock>
+               <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm mt-8">
+                  <img src={agentArchImg} alt="Agent Architecture Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+               </div>
             </div>
          </div>
       </section>

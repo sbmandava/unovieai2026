@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import CodeBlock from "@/components/ui/CodeBlock";
+import edgeArchImg from "@/assets/images/edge-architecture.png";
+import momImg from "@/assets/images/mixture-of-models.png";
 import { Server, Wifi, Cpu, Zap, Lock } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -52,34 +53,8 @@ export default function EdgeAI() {
                   </div>
                </div>
 
-               <div>
-                 <CodeBlock>
-{`  YOUR OFFICE / DATA CENTER
-  ─────────────────────────────────────────────────────────────
-
-  ┌───────────┐          ┌──────────────────────────────────┐
-  │           │          │        NEXUS                     │
-  │  Users    │          │                                  │
-  │           │          │  ┌────────────┐  ┌────────────┐  │
-  │  Browser  │──HTTP──► │  │Orchestrator│  │ Inference  │  │
-  │  API      │          │  │            │  │            │  │
-  │  Scripts  │          │  │ 5 parallel │  │ Self-hosted│  │
-  │           │          │  │ AI agents  │  │ LLMs on GPU│  │
-  │           │          │  └────────────┘  └────────────┘  │
-  │           │          │                                  │
-  │           │          │  ┌────────────┐                  │
-  │           │          │  │ Context    │                  │
-  │           │          │  │ Graph      │                  │
-  │           │          │  │            │                  │
-  │           │          │  │ Search +   │                  │
-  │           │          │  │ Graphs +   │                  │
-  │           │          │  │ Temporal   │                  │
-  │           │          │  └────────────┘                  │
-  │           │          │                                  │
-  └───────────┘          └──────────────────────────────────┘
-
-  Nothing leaves this boundary.`}
-                 </CodeBlock>
+               <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
+                 <img src={edgeArchImg} alt="Edge Architecture Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
                </div>
             </div>
          </div>
@@ -94,23 +69,9 @@ export default function EdgeAI() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-12 items-center">
-                 <CodeBlock>
-{`  GPU Memory Allocation — Mixture of Models
-  ──────────────────────────────────────────
-
-  ┌────────────────────────────┐
-  │       gemma 4B             │  20%
-  ├────────────────────────────┤
-  │ FunctionGemma │ EmbedGemma │  10%
-  ├────────────────────────────┤
-  │                            │
-  │      KV Cache Headroom     │  70%
-  │                            │
-  └────────────────────────────┘
-
-  16 concurrent inference slots
-  ~400 tokens/second aggregate`}
-                 </CodeBlock>
+                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
+                    <img src={momImg} alt="Mixture of Models Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 </div>
                  <div className="space-y-8">
                     <div>
                        <h4 className="font-bold text-white text-lg">gemma 4B</h4>

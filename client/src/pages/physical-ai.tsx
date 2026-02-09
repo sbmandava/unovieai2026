@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import jetsonImg from "@/assets/images/jetson-thor.png";
+import healthcareImg from "@/assets/images/healthcare-flow.png";
+import manufacturingImg from "@/assets/images/manufacturing-flow.png";
+import maritimeImg from "@/assets/images/maritime-flow.png";
 import CodeBlock from "@/components/ui/CodeBlock";
 import { Cpu, Activity, Truck, Anchor, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -52,21 +56,9 @@ export default function PhysicalAI() {
                  </div>
               </div>
               <div>
-                 <CodeBlock>
-{`  NVIDIA JETSON THOR
-  ──────────────────
-
-  ┌──────────────────────────────────────────────┐
-  │  BLACKWELL GPU ARCHITECTURE                  │
-  │  ┌────────────────────────────────────────┐  │
-  │  │  2,560 CUDA Cores                      │  │
-  │  │  96 Tensor Cores (5th gen)             │  │
-  │  │  Transformer Engine                    │  │
-  │  └────────────────────────────────────────┘  │
-  │  2,070 FP4 TFLOPS   7.5x vs Orin             │
-  │  128 GB LPDDR5X     273 GB/s                 │
-  └──────────────────────────────────────────────┘`}
-                 </CodeBlock>
+                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
+                    <img src={jetsonImg} alt="Jetson Thor Schematic" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 </div>
               </div>
            </div>
          </div>
@@ -86,20 +78,9 @@ export default function PhysicalAI() {
                  <p className="text-sm text-muted-foreground mb-6">
                    Medical imaging systems must reason against patient history without data leaving the hospital.
                  </p>
-                 <CodeBlock className="text-[10px] my-0 leading-tight">
-{`  HOSPITAL ENV.
-  ┌──────────────┐
-  │  Medical     │
-  │  Imaging     │──►
-  └──────────────┘
-         ▼
-  ┌──────────────────┐
-  │ JETSON THOR      │
-  │ Context Graph:   │
-  │ - History        │
-  │ - Protocols      │
-  └──────────────────┘`}
-                 </CodeBlock>
+                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm mt-4">
+                    <img src={healthcareImg} alt="Healthcare Flow" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 </div>
               </Card>
 
               {/* Manufacturing */}
@@ -111,20 +92,9 @@ export default function PhysicalAI() {
                  <p className="text-sm text-muted-foreground mb-6">
                    Predictive maintenance correlating vibration sensors against years of equipment history.
                  </p>
-                 <CodeBlock className="text-[10px] my-0 leading-tight">
-{`  FACTORY FLOOR
-  ┌──────────────┐
-  │  Vibration   │
-  │  Sensors     │──►
-  └──────────────┘
-         ▼
-  ┌──────────────────┐
-  │ JETSON THOR      │
-  │ Context Graph:   │
-  │ - Failure DB     │
-  │ - Maint. Logs    │
-  └──────────────────┘`}
-                 </CodeBlock>
+                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm mt-4">
+                    <img src={manufacturingImg} alt="Manufacturing Flow" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 </div>
               </Card>
 
               {/* Maritime */}
@@ -136,20 +106,9 @@ export default function PhysicalAI() {
                  <p className="text-sm text-muted-foreground mb-6">
                    Autonomous inspection at sea. Reasoning against operational history with no cloud fallback.
                  </p>
-                 <CodeBlock className="text-[10px] my-0 leading-tight">
-{`  MARITIME VESSEL
-  ┌──────────────┐
-  │  Navigation  │
-  │  Sensors     │──►
-  └──────────────┘
-         ▼
-  ┌──────────────────┐
-  │ JETSON THOR      │
-  │ Context Graph:   │
-  │ - Vessel Hist.   │
-  │ - Weather        │
-  └──────────────────┘`}
-                 </CodeBlock>
+                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm mt-4">
+                    <img src={maritimeImg} alt="Maritime Flow" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 </div>
               </Card>
            </div>
         </div>

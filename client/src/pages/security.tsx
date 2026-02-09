@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import CodeBlock from "@/components/ui/CodeBlock";
+import securityArchImg from "@/assets/images/security-architecture.png";
 import { Shield, Lock, FileKey, Eye } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -28,31 +28,9 @@ export default function Security() {
          <div className="container mx-auto px-6">
             <h2 className="text-3xl font-display font-bold mb-12 text-center">Defense in Depth</h2>
             <div className="max-w-4xl mx-auto">
-              <CodeBlock>
-{`  CUSTOMER NETWORK                   YOUR INFRASTRUCTURE
-  (Untrusted)                        (Trusted, Controlled)
-  ─────────────────                  ──────────────────────
-
-  ┌───────────────┐                  ┌────────────────────┐
-  │               │                  │  Security Gateway  │
-  │  Edge Proxy   │    Encrypted     │                    │
-  │               │══ P2P Channel ══►│  - Authenticates   │
-  │  4.7 MB       │  (Zero-Trust)    │  - Authorizes      │
-  │  No secrets   │                  │  - Rate limits     │
-  │               │                  │                    │
-  └───────────────┘                  └────────┬───────────┘
-                                              │
-        Internet                              │ Internal network
-        ══════════                            │ (not exposed)
-                                              ▼
-                                     ┌────────────────────┐
-                                     │  Context Graph     │
-                                     │                    │
-                                     │  Orchestrator      │
-                                     │  LLM Inference     │
-                                     │  Knowledge Store   │
-                                     └────────────────────┘`}
-              </CodeBlock>
+              <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
+                 <img src={securityArchImg} alt="Security Architecture Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+              </div>
             </div>
          </div>
       </section>
