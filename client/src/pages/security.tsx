@@ -41,49 +41,49 @@ export default function Security() {
                <div>
                   <h2 className="text-3xl font-display font-bold mb-6">Zero-Trust Encryption</h2>
                   <p className="text-muted-foreground mb-8">
-                     Data is encrypted end-to-end from the edge proxy to the backend. This is not TLS termination — it is cryptographic channel encryption.
+                     Data is encrypted end-to-end from the edge proxy to the backend. This provides defense-in-depth that goes beyond traditional TLS.
                   </p>
                   <ul className="space-y-4">
                      <li className="flex items-center gap-4 p-4 bg-card/40 border border-white/5 rounded-lg">
                         <Lock className="w-5 h-5 text-primary" />
                         <div>
-                           <h4 className="font-bold text-white">Noise XX Protocol</h4>
-                           <p className="text-xs text-muted-foreground">Mutual authentication with Curve25519</p>
+                           <h4 className="font-bold text-foreground">End-to-End Encryption</h4>
+                           <p className="text-xs text-muted-foreground">Data encrypted at edge, decrypted at destination - not at gateway</p>
                         </div>
                      </li>
                      <li className="flex items-center gap-4 p-4 bg-card/40 border border-white/5 rounded-lg">
                         <FileKey className="w-5 h-5 text-primary" />
                         <div>
-                           <h4 className="font-bold text-white">AES-256-GCM</h4>
-                           <p className="text-xs text-muted-foreground">Per-session encryption keys</p>
+                           <h4 className="font-bold text-foreground">Mutual Authentication</h4>
+                           <p className="text-xs text-muted-foreground">Both edge and gateway cryptographically verify each other</p>
                         </div>
                      </li>
                      <li className="flex items-center gap-4 p-4 bg-card/40 border border-white/5 rounded-lg">
                         <Eye className="w-5 h-5 text-primary" />
                         <div>
-                           <h4 className="font-bold text-white">No Relay</h4>
-                           <p className="text-xs text-muted-foreground">Direct peer-to-peer connections</p>
+                           <h4 className="font-bold text-foreground">Zero-Trust Model</h4>
+                           <p className="text-xs text-muted-foreground">No implicit trust in network boundaries or intermediaries</p>
                         </div>
                      </li>
                   </ul>
                </div>
                <div>
-                  <h2 className="text-3xl font-display font-bold mb-6">Compliance</h2>
+                  <h2 className="text-3xl font-display font-bold mb-6">Credential-Based Access</h2>
                   <p className="text-muted-foreground mb-8">
-                     Nexus is architected for regulated environments.
+                     Fine-grained access control based on identity attributes, not just network location.
                   </p>
                   <div className="grid grid-cols-1 gap-4">
                      <div className="p-4 border-l-2 border-primary bg-card/20">
-                        <h4 className="font-bold text-white mb-1">DoD / IL4-IL5</h4>
-                        <p className="text-sm text-muted-foreground">Air-gapped deployment, data residency, encryption at rest.</p>
+                        <h4 className="font-bold text-foreground mb-1">No Exposed Ports</h4>
+                        <p className="text-sm text-muted-foreground">Edge initiates outbound connections only - works through NAT/firewalls securely.</p>
                      </div>
                      <div className="p-4 border-l-2 border-primary bg-card/20">
-                        <h4 className="font-bold text-white mb-1">FDA 21 CFR Part 11</h4>
-                        <p className="text-sm text-muted-foreground">Audit logging, electronic signatures, data integrity.</p>
+                        <h4 className="font-bold text-foreground mb-1">Customer Isolation</h4>
+                        <p className="text-sm text-muted-foreground">Cryptographic separation between customers ensures data privacy.</p>
                      </div>
                      <div className="p-4 border-l-2 border-primary bg-card/20">
-                        <h4 className="font-bold text-white mb-1">NERC CIP</h4>
-                        <p className="text-sm text-muted-foreground">Network segmentation, access management, incident response.</p>
+                        <h4 className="font-bold text-foreground mb-1">Secure Channels</h4>
+                        <p className="text-sm text-muted-foreground">Noise Protocol XX + AES-256-GCM for every message.</p>
                      </div>
                   </div>
                </div>
