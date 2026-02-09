@@ -11,6 +11,7 @@ import EdgeAI from "@/pages/edge-ai";
 import PhysicalAI from "@/pages/physical-ai";
 import Security from "@/pages/security";
 import UseCases from "@/pages/use-cases";
+import UseCaseDetail from "@/pages/use-case-detail";
 import NotFound from "@/pages/not-found";
 import Layout from "@/components/layout/Layout";
 import ScrollToTop from "@/components/ui/ScrollToTop";
@@ -29,6 +30,7 @@ function Router() {
           <Route path="/physical-ai" component={PhysicalAI} />
           <Route path="/security" component={Security} />
           <Route path="/use-cases" component={UseCases} />
+          <Route path="/use-cases/:slug" component={UseCaseDetail} />
           <Route component={NotFound} />
         </Switch>
       </AnimatePresence>

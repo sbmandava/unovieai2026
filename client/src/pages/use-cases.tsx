@@ -7,6 +7,7 @@ const cases = [
   {
     icon: Building,
     title: "Enterprise Compliance",
+    slug: "enterprise-compliance",
     desc: "Trace regulatory changes through internal policies. Understand not just what shifted, but who approved it and why.",
     color: "text-blue-400",
     bg: "bg-blue-500/10"
@@ -14,6 +15,7 @@ const cases = [
   {
     icon: Code,
     title: "Technical Documentation",
+    slug: "technical-documentation",
     desc: "Map hidden dependencies across APIs and services. Nexus builds the institutional knowledge that usually lives in senior engineers' heads.",
     color: "text-green-400",
     bg: "bg-green-500/10"
@@ -21,6 +23,7 @@ const cases = [
   {
     icon: Briefcase,
     title: "M&A Due Diligence",
+    slug: "ma-due-diligence",
     desc: "Map corporate structure and contract relationships from thousands of documents without data ever touching a cloud server.",
     color: "text-purple-400",
     bg: "bg-purple-500/10"
@@ -28,6 +31,7 @@ const cases = [
   {
     icon: Video,
     title: "OTT Platforms",
+    slug: "ott-platforms",
     desc: "Connect viewing analytics to editorial strategy. Understand why content decisions were made and their business outcomes.",
     color: "text-red-400",
     bg: "bg-red-500/10"
@@ -35,6 +39,7 @@ const cases = [
   {
     icon: Ship,
     title: "Maritime",
+    slug: "maritime",
     desc: "Autonomous inspection at sea. The vessel carries its own context graph, reasoning against accumulated history without shore connectivity.",
     color: "text-cyan-400",
     bg: "bg-cyan-500/10"
@@ -42,6 +47,7 @@ const cases = [
   {
     icon: Hotel,
     title: "Hospitality",
+    slug: "hospitality",
     desc: "Personalized guest experience at scale. Connect content performance to property profiles across hundreds of locations.",
     color: "text-yellow-400",
     bg: "bg-yellow-500/10"
@@ -49,6 +55,7 @@ const cases = [
   {
     icon: Rocket,
     title: "Startups",
+    slug: "startups",
     desc: "Privacy-first customer support AI. An automated product knowledge graph that deepens as your startup grows.",
     color: "text-orange-400",
     bg: "bg-orange-500/10"
@@ -91,9 +98,11 @@ export default function UseCases() {
                   <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-grow">
                     {item.desc}
                   </p>
-                  <div className="text-xs font-bold text-white flex items-center gap-2 group-hover:translate-x-1 transition-transform cursor-pointer">
-                    Read Scenario <ArrowRight className="w-3 h-3" />
-                  </div>
+                  <Link href={`/use-cases/${item.slug}`}>
+                    <a className="text-xs font-bold text-white flex items-center gap-2 group-hover:translate-x-1 transition-transform cursor-pointer">
+                      Read Scenario <ArrowRight className="w-3 h-3" />
+                    </a>
+                  </Link>
                 </Card>
               </motion.div>
             ))}
