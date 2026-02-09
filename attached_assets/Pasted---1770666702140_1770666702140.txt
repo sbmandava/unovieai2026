@@ -1,0 +1,62 @@
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                              OCKAM SECURITY ARCHITECTURE                                 │
+│                                                                                         │
+│  CUSTOMER SITE                           NEXUS DATACENTER                               │
+│  ─────────────                           ────────────────                               │
+│                                                                                         │
+│  ┌───────────────────────┐               ┌─────────────────────────────────────────┐   │
+│  │    nexus-edge         │               │           CREDENTIAL AUTHORITY          │   │
+│  │                       │               │                                         │   │
+│  │  ┌─────────────────┐  │               │  ├─ Issues credentials to edges         │   │
+│  │  │ Ockam Node      │  │               │  ├─ Issues credentials to gateways      │   │
+│  │  │                 │  │               │  ├─ Maintains identity registry         │   │
+│  │  │ ├─ Identity     │  │               │  └─ Handles credential revocation       │   │
+│  │  │ ├─ Credential   │  │               │                                         │   │
+│  │  │ └─ Inlet        │  │               └─────────────────────────────────────────┘   │
+│  │  └────────┬────────┘  │                              │                              │
+│  │           │           │                              │ (credential issuance)        │
+│  └───────────┼───────────┘                              │                              │
+│              │                                          │                              │
+│              │ Outbound TCP                             ▼                              │
+│              │ (Secure Channel)         ┌─────────────────────────────────────────┐   │
+│              │                          │            OCKAM RELAY                   │   │
+│              │                          │                                         │   │
+│              └─────────────────────────►│  ├─ Public TCP endpoint                 │   │
+│                                         │  ├─ Routes encrypted messages           │   │
+│                                         │  ├─ No access to plaintext              │   │
+│                                         │  └─ Handles NAT traversal               │   │
+│                                         │                                         │   │
+│                                         └──────────────────┬──────────────────────┘   │
+│                                                            │                          │
+│                                                            │ (encrypted routing)      │
+│                                                            ▼                          │
+│                                         ┌─────────────────────────────────────────┐   │
+│                                         │         nexus-gateway (per customer)    │   │
+│                                         │                                         │   │
+│                                         │  ┌─────────────────────────────────┐   │   │
+│                                         │  │ Ockam Node                      │   │   │
+│                                         │  │                                 │   │   │
+│                                         │  │ ├─ Identity                     │   │   │
+│                                         │  │ ├─ Secure Channel Listener      │   │   │
+│                                         │  │ ├─ Credential Verifier          │   │   │
+│                                         │  │ ├─ Access Control               │   │   │
+│                                         │  │ └─ Outlets (per service)        │   │   │
+│                                         │  │     ├─ outlet_orchestrator      │   │   │
+│                                         │  │     ├─ outlet_inference         │   │   │
+│                                         │  │     └─ outlet_context           │   │   │
+│                                         │  └─────────────────────────────────┘   │   │
+│                                         │                                         │   │
+│                                         └──────────────────┬──────────────────────┘   │
+│                                                            │                          │
+│                                                            │ (authenticated requests) │
+│                                                            ▼                          │
+│                                         ┌─────────────────────────────────────────┐   │
+│                                         │           BACKEND SERVICES              │   │
+│                                         │                                         │   │
+│                                         │  nexus-orchestrator (8000)              │   │
+│                                         │  nexus-inference (8801)                 │   │
+│                                         │  nexus-context (8151)                   │   │
+│                                         │                                         │   │
+│                                         └─────────────────────────────────────────┘   │
+│                                                                                         │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
