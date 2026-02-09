@@ -90,6 +90,64 @@ export default function Security() {
             </div>
          </div>
       </section>
+
+      {/* Critical Infrastructure Compliance */}
+      <section className="py-24 bg-slate-50/50">
+        <div className="container mx-auto px-6">
+           <h2 className="text-3xl font-display font-bold mb-12 text-center text-foreground">Compliance Ready for Critical Infrastructure</h2>
+           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: "DoD IL4 / IL5", desc: "Ready for air-gapped deployments and rigorous Defense Information Systems Agency standards." },
+                { title: "HiTRUST", desc: "Comprehensive framework for securing sensitive healthcare information." },
+                { title: "FDA 21 CFR Part 11", desc: "Ensures data integrity, audit trails, and electronic signature compliance." },
+                { title: "NIST 800-53", desc: "Security and privacy controls for federal information systems and organizations." }
+              ].map((item, i) => (
+                <Card key={i} className="p-6 bg-card border-border hover:shadow-lg transition-all duration-300">
+                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                      <Shield className="w-5 h-5" />
+                   </div>
+                   <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
+                   <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </Card>
+              ))}
+           </div>
+        </div>
+      </section>
+
+      {/* Identity-Driven Protection */}
+      <section className="py-24">
+         <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+               <h2 className="text-3xl font-display font-bold mb-6 text-foreground">Identity-Driven Graph Protection</h2>
+               <p className="text-xl text-muted-foreground">
+                  Preventing APT attacks and data leaks by binding context to identity.
+               </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+               <Card className="p-8 bg-card border-border">
+                  <h3 className="text-xl font-bold mb-4 text-foreground">Attribute-Based Access</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                     Access to the Knowledge Graph is not binary. It is granularly controlled based on verified identity attributes, ensuring users and agents only see what they are explicitly authorized to access.
+                  </p>
+               </Card>
+
+               <Card className="p-8 bg-card border-border">
+                  <h3 className="text-xl font-bold mb-4 text-foreground">Lateral Movement Prevention</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                     By enforcing mutual authentication and credential-based authorization for every service-to-service call, we eliminate the trust assumptions that APTs exploit to move laterally within a network.
+                  </p>
+               </Card>
+
+               <Card className="p-8 bg-card border-border">
+                  <h3 className="text-xl font-bold mb-4 text-foreground">Contextual Data Leaks</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                     Private context is cryptographically isolated. Even if a gateway is compromised, the data remains encrypted and inaccessible without the specific keys held only by the authorized edge and identity.
+                  </p>
+               </Card>
+            </div>
+         </div>
+      </section>
     </div>
   );
 }
