@@ -162,7 +162,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                  <img src={logoImg} alt="Unovie Logo" className="h-8 w-auto object-contain" />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                The context platform from Unovie. Building business context graphs that capture not just what your organization knows, but why decisions were made.
+                Accelerated Agentic Digital Twins for Real-Time Edge Automation. Leveraging NVIDIA and AMD Edge GPU technology.
               </p>
             </div>
             
@@ -197,7 +197,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between text-xs text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} Unovie Inc. All rights reserved.</p>
-            <p>Designed with Nexus Context Engine.</p>
+            <div className="text-right">
+              <p>HQ: 651N N.Highway-183, Suite #4120, Austin, TX 78641</p>
+              <p>Phone: +1-636-579-9725 | Email: contact@unovie.ai</p>
+            </div>
           </div>
         </div>
       </footer>
