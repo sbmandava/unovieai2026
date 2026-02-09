@@ -188,8 +188,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             <div>
-              <h4 className="font-display font-bold text-foreground mb-4">Legal</h4>
+              <h4 className="font-display font-bold text-foreground mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><Link href="/about"><a className="hover:text-primary transition-colors">About</a></Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Cookie Policy</a></li>
