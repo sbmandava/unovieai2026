@@ -93,31 +93,31 @@ export default function EdgeAI() {
 
       <section className="py-24">
         <div className="container mx-auto px-6">
-           <h2 className="text-3xl font-display font-bold mb-12 text-center">Cost Model</h2>
-           <div className="overflow-x-auto">
+           <h2 className="text-3xl font-display font-bold mb-12 text-center text-foreground">Cost Model</h2>
+           <div className="overflow-x-auto rounded-lg border border-border bg-card">
              <table className="w-full border-collapse text-left">
                <thead>
-                 <tr className="border-b border-white/10">
+                 <tr className="border-b border-border bg-muted/50">
                    <th className="py-4 px-6 font-display font-bold text-muted-foreground uppercase text-xs tracking-wider">Metric</th>
-                   <th className="py-4 px-6 font-display font-bold text-red-400 uppercase text-xs tracking-wider">Cloud AI (Per-Token)</th>
+                   <th className="py-4 px-6 font-display font-bold text-red-500 dark:text-red-400 uppercase text-xs tracking-wider">Cloud AI (Per-Token)</th>
                    <th className="py-4 px-6 font-display font-bold text-primary uppercase text-xs tracking-wider">Nexus (Self-Hosted)</th>
                  </tr>
                </thead>
-               <tbody className="divide-y divide-white/5 text-sm">
-                 <tr className="hover:bg-white/5 transition-colors">
-                   <td className="py-4 px-6 font-medium text-white">100 users</td>
+               <tbody className="divide-y divide-border text-sm bg-card">
+                 <tr className="hover:bg-muted/50 transition-colors">
+                   <td className="py-4 px-6 font-medium text-foreground">100 users</td>
                    <td className="py-4 px-6 text-muted-foreground">$20,000-80,000/month</td>
-                   <td className="py-4 px-6 text-white font-medium">Same fixed cost</td>
+                   <td className="py-4 px-6 text-foreground font-medium">Same fixed cost</td>
                  </tr>
-                 <tr className="hover:bg-white/5 transition-colors">
-                   <td className="py-4 px-6 font-medium text-white">Cost ceiling</td>
+                 <tr className="hover:bg-muted/50 transition-colors">
+                   <td className="py-4 px-6 font-medium text-foreground">Cost ceiling</td>
                    <td className="py-4 px-6 text-muted-foreground">None — grows with usage</td>
-                   <td className="py-4 px-6 text-white font-medium">Hardware capacity</td>
+                   <td className="py-4 px-6 text-foreground font-medium">Hardware capacity</td>
                  </tr>
-                 <tr className="hover:bg-white/5 transition-colors">
-                   <td className="py-4 px-6 font-medium text-white">Marginal cost per query</td>
+                 <tr className="hover:bg-muted/50 transition-colors">
+                   <td className="py-4 px-6 font-medium text-foreground">Marginal cost per query</td>
                    <td className="py-4 px-6 text-muted-foreground">Linear</td>
-                   <td className="py-4 px-6 text-white font-medium">Approaches zero</td>
+                   <td className="py-4 px-6 text-foreground font-medium">Approaches zero</td>
                  </tr>
                </tbody>
              </table>
