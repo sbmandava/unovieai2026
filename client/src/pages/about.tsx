@@ -159,7 +159,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-black/5 dark:bg-black/20">
+      <section className="py-24 bg-slate-50/50">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-display font-bold mb-6 text-foreground">Our Core Values</h2>

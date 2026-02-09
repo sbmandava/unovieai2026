@@ -60,9 +60,9 @@ export default function EdgeAI() {
          </div>
       </section>
 
-      <section className="py-24 bg-black/20">
+      <section className="py-24 bg-slate-50/50">
          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-display font-bold mb-12 text-center">Mixture of Models</h2>
+            <h2 className="text-3xl font-display font-bold mb-12 text-center text-foreground">Mixture of Models</h2>
             <div className="max-w-5xl mx-auto">
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
                 Nexus achieves extreme speed through multiple small, domain-tuned models running simultaneously.
@@ -74,15 +74,15 @@ export default function EdgeAI() {
                  </div>
                  <div className="space-y-8">
                     <div>
-                       <h4 className="font-bold text-white text-lg">gemma 4B</h4>
+                       <h4 className="font-bold text-foreground text-lg">gemma 4B</h4>
                        <p className="text-muted-foreground">Reasoning and synthesis. Small enough for concurrency, capable enough for complex queries.</p>
                     </div>
                     <div>
-                       <h4 className="font-bold text-white text-lg">FunctionGemma</h4>
+                       <h4 className="font-bold text-foreground text-lg">FunctionGemma</h4>
                        <p className="text-muted-foreground">Tool routing. Near-zero inference cost leaves GPU resources for the models that need them.</p>
                     </div>
                     <div>
-                       <h4 className="font-bold text-white text-lg">Domain Specialists</h4>
+                       <h4 className="font-bold text-foreground text-lg">Domain Specialists</h4>
                        <p className="text-muted-foreground">MedGemma (clinical), CodeGemma (technical). Swapped in per deployment.</p>
                     </div>
                  </div>

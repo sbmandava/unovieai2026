@@ -24,9 +24,9 @@ export default function Security() {
         </motion.div>
       </section>
 
-      <section className="py-12 bg-black/20">
+      <section className="py-12 bg-slate-50/50">
          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-display font-bold mb-12 text-center">Defense in Depth</h2>
+            <h2 className="text-3xl font-display font-bold mb-12 text-center text-foreground">Defense in Depth</h2>
             <div className="max-w-4xl mx-auto">
               <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl">
                  <img src={securityArchImg} alt="Security Architecture Diagram" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />

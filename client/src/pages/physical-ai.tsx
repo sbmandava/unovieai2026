@@ -33,29 +33,29 @@ export default function PhysicalAI() {
         </motion.div>
       </section>
 
-      <section className="py-12 bg-black/20">
+      <section className="py-12 bg-slate-50/50">
          <div className="container mx-auto px-6">
            <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                 <h2 className="text-3xl font-display font-bold mb-6">Unovie Intelligent Edge</h2>
+                 <h2 className="text-3xl font-display font-bold mb-6 text-foreground">Unovie Intelligent Edge</h2>
                  <p className="text-muted-foreground mb-8">
                    The most powerful edge AI module ever built. A Blackwell GPU with 128 GB of memory in a 130-watt power envelope.
                  </p>
                  <div className="grid grid-cols-2 gap-6">
                     <div>
-                       <div className="text-2xl font-bold text-white mb-1">2,070</div>
+                       <div className="text-2xl font-bold text-foreground mb-1">2,070</div>
                        <div className="text-xs text-muted-foreground uppercase tracking-widest">FP4 TFLOPS</div>
                     </div>
                     <div>
-                       <div className="text-2xl font-bold text-white mb-1">128 GB</div>
+                       <div className="text-2xl font-bold text-foreground mb-1">128 GB</div>
                        <div className="text-xs text-muted-foreground uppercase tracking-widest">Memory</div>
                     </div>
                     <div>
-                       <div className="text-2xl font-bold text-white mb-1">130W</div>
+                       <div className="text-2xl font-bold text-foreground mb-1">130W</div>
                        <div className="text-xs text-muted-foreground uppercase tracking-widest">Power</div>
                     </div>
                     <div>
-                       <div className="text-2xl font-bold text-white mb-1">32</div>
+                       <div className="text-2xl font-bold text-foreground mb-1">32</div>
                        <div className="text-xs text-muted-foreground uppercase tracking-widest">Camera Inputs</div>
                     </div>
                  </div>

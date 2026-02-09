@@ -22,11 +22,11 @@ export default function Platform() {
         </motion.div>
       </section>
 
-      <section className="py-12 bg-black/20">
+      <section className="py-12 bg-slate-50/50">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
              <div>
-               <h2 className="text-3xl font-display font-bold mb-6">The Context Graph</h2>
+               <h2 className="text-3xl font-display font-bold mb-6 text-foreground">The Context Graph</h2>
                <p className="text-muted-foreground mb-8">
                  A policy change references an audit finding. The audit finding references a customer incident. The incident traces back to an understaffed integration team. That chain is what Nexus builds.
                </p>
@@ -34,21 +34,21 @@ export default function Platform() {
                   <li className="flex items-start gap-4">
                     <Database className="w-6 h-6 text-primary mt-1" />
                     <div>
-                      <h4 className="text-white font-bold">Entities</h4>
+                      <h4 className="text-foreground font-bold">Entities</h4>
                       <p className="text-sm text-muted-foreground">People, products, teams, APIs, policies, regulations.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
                     <Network className="w-6 h-6 text-primary mt-1" />
                     <div>
-                      <h4 className="text-white font-bold">Relationships</h4>
+                      <h4 className="text-foreground font-bold">Relationships</h4>
                       <p className="text-sm text-muted-foreground">Depends on, replaced by, approved by, caused by.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
                     <Clock className="w-6 h-6 text-primary mt-1" />
                     <div>
-                      <h4 className="text-white font-bold">Temporal Evolution</h4>
+                      <h4 className="text-foreground font-bold">Temporal Evolution</h4>
                       <p className="text-sm text-muted-foreground">When things changed, what triggered the change.</p>
                     </div>
                   </li>
