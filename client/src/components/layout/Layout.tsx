@@ -191,6 +191,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-display font-bold text-foreground mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/about"><a className="hover:text-primary transition-colors">About</a></Link></li>
+                <li><Link href="/turnkey-projects"><a className="hover:text-primary transition-colors">Turnkey Projects</a></Link></li>
                 <li><Link href="/company/privacy"><a className="hover:text-primary transition-colors">Privacy Policy</a></Link></li>
                 <li><Link href="/company/tos"><a className="hover:text-primary transition-colors">Terms of Service</a></Link></li>
               </ul>
