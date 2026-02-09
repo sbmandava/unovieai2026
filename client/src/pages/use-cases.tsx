@@ -90,16 +90,16 @@ export default function UseCases() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
               >
-                <Card className="h-full bg-card/40 border-white/5 p-8 hover:bg-card/60 transition-colors group flex flex-col">
+                <Card className="h-full bg-card border-border p-8 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group flex flex-col">
                   <div className={`w-12 h-12 ${item.bg} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <item.icon className={`w-6 h-6 ${item.color}`} />
                   </div>
-                  <h3 className="text-xl font-display font-bold mb-4">{item.title}</h3>
+                  <h3 className="text-xl font-display font-bold mb-4 text-foreground">{item.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-grow">
                     {item.desc}
                   </p>
                   <Link href={`/use-cases/${item.slug}`}>
-                    <a className="text-xs font-bold text-white flex items-center gap-2 group-hover:translate-x-1 transition-transform cursor-pointer">
+                    <a className="text-xs font-bold text-foreground flex items-center gap-2 group-hover:translate-x-1 transition-transform cursor-pointer group-hover:text-primary">
                       Read Scenario <ArrowRight className="w-3 h-3" />
                     </a>
                   </Link>
@@ -110,11 +110,11 @@ export default function UseCases() {
         </div>
       </section>
       
-      <section className="py-24 border-t border-white/5 mt-12">
+      <section className="py-24 border-t border-border mt-12">
         <div className="container mx-auto px-6 text-center">
-           <h2 className="text-3xl font-display font-bold mb-8">Ready to close the gap?</h2>
+           <h2 className="text-3xl font-display font-bold mb-8 text-foreground">Ready to close the gap?</h2>
            <Link href="/">
-             <a className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold rounded-sm hover:bg-white/90 transition-colors">
+             <a className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-bold rounded-sm hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
                Request Early Access
              </a>
            </Link>
