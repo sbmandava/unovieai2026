@@ -147,7 +147,7 @@ export default function TurnkeyProjects() {
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-8 leading-tight text-foreground">
               Success-Based <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500">AI Project Delivery</span>
+              <span className="text-gradient">AI Project Delivery</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
               We accept full responsibility for your AI transformation initiatives from Architecture Design through POC and MVP
