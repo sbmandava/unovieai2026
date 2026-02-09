@@ -13,12 +13,14 @@ import Security from "@/pages/security";
 import UseCases from "@/pages/use-cases";
 import NotFound from "@/pages/not-found";
 import Layout from "@/components/layout/Layout";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 function Router() {
   const [location] = useLocation();
   
   return (
     <Layout>
+      <ScrollToTop />
       <AnimatePresence mode="wait">
         <Switch location={location} key={location}>
           <Route path="/" component={Home} />

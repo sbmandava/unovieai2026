@@ -81,25 +81,35 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background border-b border-white/10 p-6 flex flex-col gap-4 md:hidden animate-in slide-in-from-top-5">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a
-                  className="text-lg font-medium text-white/80 hover:text-white"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </Link>
-            ))}
-            <div className="h-px bg-white/10 my-2" />
-            <Button className="w-full bg-white text-black hover:bg-white/90">
-              Request Access
-            </Button>
-          </div>
-        )}
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="absolute top-full left-0 right-0 h-[calc(100vh-80px)] bg-background/95 backdrop-blur-xl border-t border-white/10 p-6 flex flex-col gap-6 md:hidden animate-in slide-in-from-top-5 z-40">
+              <div className="flex flex-col gap-4">
+                {navLinks.map((link) => (
+                  <Link key={link.href} href={link.href}>
+                    <a
+                      className={cn(
+                        "text-2xl font-display font-bold transition-colors hover:text-primary",
+                        location === link.href ? "text-white" : "text-white/60"
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+              <div className="h-px bg-white/10 my-2" />
+              <div className="flex flex-col gap-4 mt-auto pb-8">
+                <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10 h-12 text-lg">
+                  Sign In
+                </Button>
+                <Button className="w-full bg-white text-black hover:bg-white/90 font-bold h-12 text-lg">
+                  Request Access
+                </Button>
+              </div>
+            </div>
+          )}
       </nav>
 
       {/* Main Content */}
