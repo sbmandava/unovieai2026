@@ -11,6 +11,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import logoImg from "@/assets/images/unovie-logo.png";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,10 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/">
             <a className="flex items-center gap-2 group">
-              <div className="w-8 h-8 bg-primary text-primary-foreground flex items-center justify-center rounded-sm font-display font-bold text-xl group-hover:scale-105 transition-transform">
-                N
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight text-foreground">Nexus</span>
+              <img src={logoImg} alt="Unovie Logo" className="h-8 w-auto object-contain" />
             </a>
           </Link>
 
@@ -160,10 +159,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-6 h-6 bg-primary text-primary-foreground flex items-center justify-center rounded-sm font-display font-bold text-sm">
-                  N
-                </div>
-                <span className="font-display font-bold text-lg text-foreground">Nexus</span>
+                 <img src={logoImg} alt="Unovie Logo" className="h-8 w-auto object-contain" />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 The context platform from Unovie. Building business context graphs that capture not just what your organization knows, but why decisions were made.
