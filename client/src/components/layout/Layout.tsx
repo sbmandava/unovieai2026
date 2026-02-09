@@ -193,7 +193,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/about"><a className="hover:text-primary transition-colors">About</a></Link></li>
                 <li><Link href="/company/privacy"><a className="hover:text-primary transition-colors">Privacy Policy</a></Link></li>
                 <li><Link href="/company/tos"><a className="hover:text-primary transition-colors">Terms of Service</a></Link></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Cookie Policy</a></li>
               </ul>
             </div>
           </div>
