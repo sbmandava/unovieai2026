@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-import jetsonImg from "@/assets/images/jetson-thor.png";
+import edgeDeviceImg from "@/assets/images/unovie-edge-device.png";
+import edgePortsImg from "@/assets/images/unovie-edge-ports.png";
+import edgeCamerasImg from "@/assets/images/unovie-edge-cameras.png";
 import healthcareImg from "@/assets/images/healthcare-flow.png";
 import manufacturingImg from "@/assets/images/manufacturing-flow.png";
 import maritimeImg from "@/assets/images/maritime-flow.png";
 import CodeBlock from "@/components/ui/CodeBlock";
-import { Cpu, Activity, Truck, Anchor, Zap } from "lucide-react";
+import { Cpu, Activity, Truck, Anchor, Zap, Box, Layers, Video } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function PhysicalAI() {
   return (
@@ -23,16 +26,16 @@ export default function PhysicalAI() {
              Context graphs at the <span className="text-gradient">industrial edge.</span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Delivered today on NVIDIA Jetson Thor. Scaling tomorrow on NVIDIA IGX. For environments where the context graph must be physically present.
+            Delivered today on Unovie Intelligent Edge. Scaling tomorrow on NVIDIA IGX. For environments where the context graph must be physically present.
           </p>
         </motion.div>
       </section>
 
       <section className="py-12 bg-black/20">
          <div className="container mx-auto px-6">
-           <div className="grid lg:grid-cols-2 gap-16">
+           <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                 <h2 className="text-3xl font-display font-bold mb-6">NVIDIA Jetson Thor</h2>
+                 <h2 className="text-3xl font-display font-bold mb-6">Unovie Intelligent Edge</h2>
                  <p className="text-muted-foreground mb-8">
                    The most powerful edge AI module ever built. A Blackwell GPU with 128 GB of memory in a 130-watt power envelope.
                  </p>
@@ -56,9 +59,28 @@ export default function PhysicalAI() {
                  </div>
               </div>
               <div>
-                 <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl">
-                    <img src={jetsonImg} alt="Jetson Thor Schematic" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
-                 </div>
+                 <Tabs defaultValue="device" className="w-full">
+                   <TabsList className="grid w-full grid-cols-3 mb-4">
+                     <TabsTrigger value="device">Device</TabsTrigger>
+                     <TabsTrigger value="ports">Specs</TabsTrigger>
+                     <TabsTrigger value="deployment">Deployment</TabsTrigger>
+                   </TabsList>
+                   <TabsContent value="device">
+                     <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl aspect-video flex items-center justify-center p-4">
+                        <img src={edgeDeviceImg} alt="Unovie Edge Device" className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500" />
+                     </div>
+                   </TabsContent>
+                   <TabsContent value="ports">
+                     <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl aspect-video flex items-center justify-center p-4">
+                        <img src={edgePortsImg} alt="Unovie Edge Ports" className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500" />
+                     </div>
+                   </TabsContent>
+                   <TabsContent value="deployment">
+                     <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl aspect-video flex items-center justify-center p-4">
+                        <img src={edgeCamerasImg} alt="Unovie Edge Deployment" className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500" />
+                     </div>
+                   </TabsContent>
+                 </Tabs>
               </div>
            </div>
          </div>
