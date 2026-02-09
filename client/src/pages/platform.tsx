@@ -104,15 +104,15 @@ export default function Platform() {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-b from-black/40 to-transparent">
+      <section className="py-24 bg-slate-50/50">
          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-display font-bold mb-8 text-center">How Questions Become Understanding</h2>
-            <div className="max-w-4xl mx-auto">
-               <p className="text-center text-muted-foreground mb-12">
+            <h2 className="text-3xl font-display font-bold mb-8 text-center text-foreground">How Questions Become Understanding</h2>
+            <div className="w-full">
+               <p className="text-center text-muted-foreground mb-12 max-w-4xl mx-auto">
                  When you ask a question, multiple specialized agents fan out simultaneously.
                </p>
-               <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl mt-8">
-                  <img src={agentArchImg} alt="Agent Architecture Diagram" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
+               <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl mt-8 w-full">
+                  <img src={agentArchImg} alt="Agent Architecture Diagram" className="w-full h-auto" />
                </div>
             </div>
          </div>
