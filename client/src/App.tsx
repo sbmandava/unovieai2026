@@ -11,6 +11,7 @@ import EdgeAI from "@/pages/edge-ai";
 import PhysicalAI from "@/pages/physical-ai";
 import Security from "@/pages/security";
 import UseCases from "@/pages/use-cases";
+import TurnkeyProjects from "@/pages/turnkey-projects";
 import UseCaseDetail from "@/pages/use-case-detail";
 import NotFound from "@/pages/not-found";
 import Layout from "@/components/layout/Layout";
@@ -31,6 +32,7 @@ function Router() {
           <Route path="/security" component={Security} />
           <Route path="/use-cases" component={UseCases} />
           <Route path="/use-cases/:slug" component={UseCaseDetail} />
+          <Route path="/turnkey-projects" component={TurnkeyProjects} />
           <Route component={NotFound} />
         </Switch>
       </AnimatePresence>

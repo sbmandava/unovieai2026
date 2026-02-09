@@ -33,6 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { href: "/physical-ai", label: "Physical AI" },
     { href: "/security", label: "Security" },
     { href: "/use-cases", label: "Use Cases" },
+    { href: "/turnkey-projects", label: "Services" },
   ];
 
   return (
