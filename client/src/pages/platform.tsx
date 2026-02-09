@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import contextGraphImg from "@/assets/images/context-graph.png";
-import agentArchImg from "@/assets/images/agent-architecture.png";
+import agentArchImg from "@/assets/images/context-graph-architecture.png";
 import { Database, Network, Clock, Search, Workflow, Brain } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
