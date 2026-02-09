@@ -29,7 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const navLinks = [
     { href: "/platform", label: "Platform" },
-    { href: "/edge-ai", label: "Edge AI" },
+    { href: "/edge-ai", label: "Context Graphs" },
     { href: "/physical-ai", label: "Physical AI" },
     { href: "/security", label: "Security" },
     { href: "/use-cases", label: "Use Cases" },
@@ -171,7 +171,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-display font-bold text-foreground mb-4">Product</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/platform"><a className="hover:text-primary transition-colors">Platform</a></Link></li>
-                <li><Link href="/edge-ai"><a className="hover:text-primary transition-colors">Edge AI</a></Link></li>
+                <li><Link href="/edge-ai"><a className="hover:text-primary transition-colors">Context Graphs</a></Link></li>
                 <li><Link href="/physical-ai"><a className="hover:text-primary transition-colors">Physical AI</a></Link></li>
                 <li><Link href="/security"><a className="hover:text-primary transition-colors">Security</a></Link></li>
               </ul>
