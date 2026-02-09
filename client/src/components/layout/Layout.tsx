@@ -163,7 +163,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                  <img src={logoImg} alt="Unovie Logo" className="h-8 w-auto object-contain" />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Accelerated Agentic Digital Twins for Real-Time Edge Automation. Leveraging NVIDIA and AMD Edge GPU technology.
+                Digital Twin Context Graphs for Real-time Edge AI powered by NVIDIA Thor and AMD Stix HALO 
               </p>
             </div>
             

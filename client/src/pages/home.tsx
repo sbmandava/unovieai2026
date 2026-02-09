@@ -30,11 +30,11 @@ export default function Home() {
               Industry 4.0 Edge-AI Platform
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-8 leading-tight text-foreground">
-              Accelerated Agentic Digital Twins for <br />
-              <span className="text-gradient">Real-Time Edge Automation</span>
+              Digital Twin Context Graphs for <br />
+              <span className="text-gradient">Real-Time Edge AI</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 font-light leading-relaxed">
-              Leveraging NVIDIA and AMD Edge GPU technology, our solutions power advanced AI World Models and Complex Vision systems. 
+              Powered by NVIDIA Thor and AMD Stix HALO, our solutions power advanced AI World Models and Complex Vision systems. 
               We deliver low-latency, real-time decision-making through Streaming ML/DL Sensor Analytics.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
