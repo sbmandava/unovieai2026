@@ -81,16 +81,16 @@ export default function UseCaseDetail() {
           </div>
 
           <div className="lg:sticky lg:top-32 space-y-8">
-            <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl group">
+               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                <img 
                  src={data.image} 
                  alt={`${data.title} Scenario Diagram`} 
-                 className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" 
+                 className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" 
                />
             </div>
             
-            <div className="bg-card/40 border border-white/5 p-8 rounded-lg">
+            <div className="bg-card/40 border border-border p-8 rounded-lg shadow-sm">
               <h4 className="font-bold text-white mb-4 flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-400" />
                 Outcome

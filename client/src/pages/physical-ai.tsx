@@ -56,8 +56,8 @@ export default function PhysicalAI() {
                  </div>
               </div>
               <div>
-                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
-                    <img src={jetsonImg} alt="Jetson Thor Schematic" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl">
+                    <img src={jetsonImg} alt="Jetson Thor Schematic" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
                  </div>
               </div>
            </div>
@@ -78,8 +78,8 @@ export default function PhysicalAI() {
                  <p className="text-sm text-muted-foreground mb-6">
                    Medical imaging systems must reason against patient history without data leaving the hospital.
                  </p>
-                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm mt-4">
-                    <img src={healthcareImg} alt="Healthcare Flow" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-lg mt-4">
+                    <img src={healthcareImg} alt="Healthcare Flow" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
                  </div>
               </Card>
 
@@ -92,8 +92,8 @@ export default function PhysicalAI() {
                  <p className="text-sm text-muted-foreground mb-6">
                    Predictive maintenance correlating vibration sensors against years of equipment history.
                  </p>
-                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm mt-4">
-                    <img src={manufacturingImg} alt="Manufacturing Flow" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-lg mt-4">
+                    <img src={manufacturingImg} alt="Manufacturing Flow" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
                  </div>
               </Card>
 
@@ -106,8 +106,8 @@ export default function PhysicalAI() {
                  <p className="text-sm text-muted-foreground mb-6">
                    Autonomous inspection at sea. Reasoning against operational history with no cloud fallback.
                  </p>
-                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm mt-4">
-                    <img src={maritimeImg} alt="Maritime Flow" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-lg mt-4">
+                    <img src={maritimeImg} alt="Maritime Flow" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
                  </div>
               </Card>
            </div>

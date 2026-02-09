@@ -28,8 +28,8 @@ export default function Security() {
          <div className="container mx-auto px-6">
             <h2 className="text-3xl font-display font-bold mb-12 text-center">Defense in Depth</h2>
             <div className="max-w-4xl mx-auto">
-              <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
-                 <img src={securityArchImg} alt="Security Architecture Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+              <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl">
+                 <img src={securityArchImg} alt="Security Architecture Diagram" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
               </div>
             </div>
          </div>

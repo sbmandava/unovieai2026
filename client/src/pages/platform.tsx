@@ -56,8 +56,8 @@ export default function Platform() {
              </div>
              <div className="relative group">
                 <div className="absolute inset-0 bg-primary/20 blur-3xl -z-10 group-hover:bg-primary/30 transition-colors duration-500" />
-                <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
-                  <img src={contextGraphImg} alt="Context Graph Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl">
+                  <img src={contextGraphImg} alt="Context Graph Diagram" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
                 </div>
              </div>
           </div>
@@ -111,8 +111,8 @@ export default function Platform() {
                <p className="text-center text-muted-foreground mb-12">
                  When you ask a question, multiple specialized agents fan out simultaneously.
                </p>
-               <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm mt-8">
-                  <img src={agentArchImg} alt="Agent Architecture Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+               <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl mt-8">
+                  <img src={agentArchImg} alt="Agent Architecture Diagram" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
                </div>
             </div>
          </div>

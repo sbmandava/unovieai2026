@@ -53,8 +53,8 @@ export default function EdgeAI() {
                   </div>
                </div>
 
-               <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
-                 <img src={edgeArchImg} alt="Edge Architecture Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+               <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl">
+                 <img src={edgeArchImg} alt="Edge Architecture Diagram" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
                </div>
             </div>
          </div>
@@ -69,8 +69,8 @@ export default function EdgeAI() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-12 items-center">
-                 <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
-                    <img src={momImg} alt="Mixture of Models Diagram" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity invert" />
+                 <div className="relative rounded-lg overflow-hidden border border-border bg-card shadow-xl">
+                    <img src={momImg} alt="Mixture of Models Diagram" className="w-full h-auto hover:scale-[1.02] transition-transform duration-500" />
                  </div>
                  <div className="space-y-8">
                     <div>
