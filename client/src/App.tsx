@@ -15,6 +15,7 @@ import TurnkeyProjects from "@/pages/turnkey-projects";
 import UseCaseDetail from "@/pages/use-case-detail";
 import About from "@/pages/about";
 import PrivacyPolicy from "@/pages/privacy-policy";
+import TermsOfService from "@/pages/terms-of-service";
 import NotFound from "@/pages/not-found";
 import Layout from "@/components/layout/Layout";
 import ScrollToTop from "@/components/ui/ScrollToTop";
@@ -37,6 +38,7 @@ function Router() {
           <Route path="/turnkey-projects" component={TurnkeyProjects} />
           <Route path="/about" component={About} />
           <Route path="/company/privacy" component={PrivacyPolicy} />
+          <Route path="/company/tos" component={TermsOfService} />
           <Route component={NotFound} />
         </Switch>
       </AnimatePresence>
